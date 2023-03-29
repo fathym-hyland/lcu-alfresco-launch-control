@@ -1,0 +1,52 @@
+{
+  "Package": {
+    "Name": "Alfresco on Azure",
+    "Description": "A modular frontend example for Alfresco Community, with new Alfresco instance deployed on Azure. Built for use with the Fathym CALZ (Composable Application Landing Zone)",
+    "Image": "https://www.fathym.com/img/hyland-alfresco-500x275.png",
+    "PreviewImage": "https://www.fathym.com/img/alfresco-logo.png"
+  },
+  "Configurations": {
+    "Community": {
+      "Name": "Alfresco Community - Launch Control Unit (LCU)",
+      "Description": "Alfresco Community - Launch Control Unit (LCU)",
+      "Phases": [
+        {
+          "Name": "Configure Resource Group",
+          "Order": 1,
+          "Asset": "seed"
+        },
+        {
+          "Name": "Setup Alfresco Community",
+          "Order": 2,
+          "Asset": "setup-community"
+        },
+        {
+          "Name": "Configure Alfresco Proxies",
+          "Order": 3,
+          "Asset": "configure-proxies"
+        }
+      ]
+    },
+    "Enterprise": {
+      "Name": "Alfresco Enterprise - Launch Control Unit (LCU)",
+      "Description": "Alfresco Enterprise - Launch Control Unit (LCU)",
+      "Phases": [
+        {
+          "Name": "Configure Resource Group",
+          "Order": 1,
+          "Asset": "seed"
+        },
+        {
+          "Name": "Setup Alfresco Enterprise",
+          "Order": 2,
+          "Asset": "setup-enterprise"
+        },
+        {
+          "Name": "Configure Alfresco Proxies",
+          "Order": 3,
+          "Asset": "configure-proxies"
+        }
+      ]
+    }
+  }
+}

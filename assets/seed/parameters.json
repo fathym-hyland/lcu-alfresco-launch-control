@@ -1,0 +1,22 @@
+{
+  "AZURE_CLOUD_LOOKUP": {
+    "type": "eac:env:clouds|select"
+  },
+  "PROJECT_LOOKUP": {
+    "type": "eac:projects|select"
+  },
+  "ORGANIZATION": {
+    "type": "git:organizations|select"
+  },
+  "RESOURCE_NAME": [
+    {
+      "type": "eac:env:clouds:groups|select",
+      "optional": true,
+      "AZURE_CLOUD_LOOKUP": "cloudLookup"
+    },
+    {
+      "type": "input",
+      "message": "Enter a name for your alfresco cloud resources"
+    }
+  ]
+}

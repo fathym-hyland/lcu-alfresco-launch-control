@@ -1,0 +1,51 @@
+{
+  "Applications": {
+    "{{PROJECT_LOOKUP}}-alfresco-api": {
+      "Application": {
+        "Description": "Alfresco API",
+        "Name": "Alfresco API"
+      },
+      "LookupConfig": {
+        "PathRegex": "/alfresco.*"
+      },
+      "LowCodeUnit": {
+        "APIRoot": "http://{{PUBLIC_IP_ADDRESS_1}}",
+        "Security": "~",
+        "Type": "API"
+      },
+      "Processor": {
+        "InboundPath": "alfresco",
+        "Type": "Proxy"
+      }
+    },
+    "{{PROJECT_LOOKUP}}-alfresco-admin": {
+      "Application": {
+        "Description": "Alfresco Admin",
+        "Name": "Alfresco Admin"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "LowCodeUnit": {
+        "SPARoot": "http://{{PUBLIC_IP_ADDRESS_1}}",
+        "Type": "SPA"
+      },
+      "Processor": {
+        "InboundPath": "/",
+        "Type": "Proxy"
+      }
+    }
+  },
+  "Environments": {
+    "{{EaC.PrimaryEnvironment}}": {
+      "Clouds": {
+        "{{AZURE_CLOUD_LOOKUP}}": {}
+      }
+    }
+  },
+  "Projects": {
+    "{{PROJECT_LOOKUP}}": {
+      "ApplicationLookups": ["{{PROJECT_LOOKUP}}-alfresco-api", "{{PROJECT_LOOKUP}}-alfresco-admin"]
+    }
+  }
+}
