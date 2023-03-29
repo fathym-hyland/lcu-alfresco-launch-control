@@ -1,9 +1,11 @@
 {
-  "SSH_PUBLIC_KEY": {
-    "Type": "az:sshkey:create|confirm",
-    "Arguments": {
-      "cloudLookup": "{{AZURE_CLOUD_LOOKUP}}",
-      "resourceGroup": "{{RESOURCE_NAME}}"
+  "SSH_PUBLIC_KEY": [
+    {
+      "Type": "az:sshkey:create|confirm",
+      "Arguments": {
+        "cloudLookup": "{{AZURE_CLOUD_LOOKUP}}",
+        "resourceGroup": "{{RESOURCE_NAME}}"
+      }
     }
-  }
+  ]
 }
