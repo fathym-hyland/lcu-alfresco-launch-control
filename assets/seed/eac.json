@@ -9,7 +9,7 @@
         "PathRegex": "/dashboard.*"
       },
       "LowCodeUnit": {
-        "SourceControlLookup": "fork|github://fathym-hyland/alfresco-default",
+        "SourceControlLookup": "github://{{ORGANIZATION}}/alfresco-default",
         "Build": "latest",
         "Path": "lcu-release.yml",
         "Type": "GitHub"
@@ -78,9 +78,9 @@
           "DevOpsActionTriggerLookups": ["github-artifacts-release-angular"],
           "Branches": ["main"],
           "MainBranch": "main",
-          "Organization": "fathym-hyland",
+          "Organization": "{{ORGANIZATION}}",
           "Repository": "alfresco-default",
-          "Name": "github://fathym-hyland/alfresco-default",
+          "Name": "github://{{ORGANIZATION}}/alfresco-default",
           "Type": "GitHub"
         }
       }

@@ -1,0 +1,9 @@
+{
+  "SSH_PUBLIC_KEY": {
+    "Type": "AZCLI.SSHKey.Create",
+    "Arguments": {
+      "cloudLookup": "{{AZURE_CLOUD_LOOKUP}}",
+      "resourceGroup": "{{RESOURCE_NAME}}"
+    }
+  }
+}
