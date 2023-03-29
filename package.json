@@ -1,6 +1,6 @@
 {
   "name": "@fathym-hyland/lcu-alfresco-launch-control",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "description": "@fathym-hyland/lcu-alfresco-launch-control",
   "author": "Fathym, Inc",
   "main": "lcu.json",
