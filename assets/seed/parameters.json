@@ -1,12 +1,12 @@
 {
   "AZURE_CLOUD_LOOKUP": [
     {
-      "type": "eac:env:clouds|select"
+      "Type": "eac:env:clouds|select"
     }
   ],
   "PROJECT_LOOKUP": [
     {
-      "type": "eac:projects|select"
+      "Type": "eac:projects|select"
     }
   ],
   "ORGANIZATION": [
